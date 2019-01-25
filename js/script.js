@@ -15,21 +15,54 @@ var links = ["https://youtu.be/hHtv2XMZlKs", "https://youtu.be/ApXoWvfEYVU", "ht
 function emptySongInfo(){
     $("#songs").empty();
     // Use jQuery to empty all of the remaining divs
-
-
+    $("#images").empty();
+    $("#artists").empty();
+    $("#lengths").empty()
+    $("#links").empty();
 }
 
 
 function addSongInfo(){
     // BELOW write the code to add new items to each of the arrays.
-
-
+    songs.push($("#song").val());
+    artists.push($("#artist").val());
+    songLength.push($("#length").val());
+    imgLinks.push($("#image").val());
+    links.push($("#link").val());
 }
 
 $("#add").click(function() {
     emptySongInfo();
     addSongInfo();
     displaySongInfo();
+    
 });
 
-displaySongInfo();
+
+
+
+
+
+
+
+function displaySongInfo(){
+songs.forEach(function(song){
+        $("#songs").append("<ul>" + song + "</ul>");
+    });
+    
+imgLinks.forEach(function(imglink){
+    $("#images").append("src" + imglink);
+    });
+    
+artists.forEach(function(artist){
+      $("#artists").append("<ul>" + artist + "</ul>");
+    });
+    
+songLength.forEach(function(length){
+    $("#lengths").append("<ul>" + length + "</ul>");
+    });
+    
+links.forEach(function(link){
+    $("#links").append("<a href" + link);
+    });
+}
