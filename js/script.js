@@ -6,7 +6,7 @@ var songs = ["Lucid Dreams", "Sunflower", "Stressed Out", "The Way Life Geos"];
 // Make sure they match the same order as your array above
 var imgLinks = ["https://i.ytimg.com/vi/mzB1VGEGcSU/maxresdefault.jpg", "https://i.ytimg.com/vi/ZHVKlgfiYmU/maxresdefault.jpg", "https://i.kym-cdn.com/entries/icons/mobile/000/026/967/twentyonepilots-stressedout.jpg", "https://i.ytimg.com/vi/Vi2XaiKhgiU/maxresdefault.jpg"]
 var artists = ["Juice WRLD", "Swae Lee and PostMalone", "Twenty One Pilots", "Lil Uzi Vert"]
-var songLength = [359, 241, 345, 341]
+var songLength = ["3:59", "2:41", "3:45", "3:41"]
 var links = ["https://youtu.be/hHtv2XMZlKs", "https://youtu.be/ApXoWvfEYVU", "https://youtu.be/pXRviuL6vMY", "https://youtu.be/Vi2XaiKhgiU"]
     // BELOW Use forEach Loop to display the data from each of your array's in the correct div
 
@@ -47,22 +47,24 @@ $("#add").click(function() {
 
 function displaySongInfo(){
 songs.forEach(function(song){
-        $("#songs").append("<ul>" + song + "</ul>");
+        $("#songs").append("<p>" + song + "</p>");
     });
     
 imgLinks.forEach(function(imglink){
-    $("#images").append("src" + imglink);
+    $("#images").append("<img src='" + imglink +"'>");
     });
     
 artists.forEach(function(artist){
-      $("#artists").append("<ul>" + artist + "</ul>");
+      $("#artists").append("<p>" + artist + "</p>");
     });
     
 songLength.forEach(function(length){
-    $("#lengths").append("<ul>" + length + "</ul>");
+    $("#lengths").append("<p>" + length + "</p>");
     });
     
 links.forEach(function(link){
-    $("#links").append("<a href" + link);
-    });
+    $("#links").append("<a href='" + link + "'> Click Me </a>");    
+});
 }
+
+displaySongInfo().show();

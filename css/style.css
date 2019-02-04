@@ -1,4 +1,5 @@
 h1 {
+    
     text-align: center;
 }
 
@@ -26,12 +27,17 @@ h1 {
     height: 100px;
     font-weight: bold;
     margin: 20px;
+    font-family: 'Merriweather', serif;
+
+    
 }
 
 #artists p {
     font-size: 18px;
     height: 100px;
     margin: 20px;
+    font-family: 'Playfair Display', serif;
+    text-decoration: underline;
 }
 
 #lengths p {
@@ -39,6 +45,7 @@ h1 {
     height: 100px;
     margin: 20px;
     text-align: right;
+    
 }
 
 #links a {
@@ -47,6 +54,7 @@ h1 {
     height: 100px;
     font-weight: bold;
     margin: 20px;
+     
 }
 
 #form {
@@ -64,3 +72,4 @@ button {
     font-size: 14px;
     padding: 5px 10px;
 }
+
